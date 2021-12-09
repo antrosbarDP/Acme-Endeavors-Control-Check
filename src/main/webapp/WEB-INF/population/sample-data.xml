@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+- sample-data.xml
+-
+- Copyright (C) 2012-2021 Rafael Corchuelo.
+-
+- In keeping with the traditional purpose of furthering education and research, it is
+- the policy of the copyright owner to permit non-commercial use and redistribution of
+- this software. It has been tested carefully, but it is not guaranteed for any particular
+- purposes.  The copyright owner does not offer any warranties or representations, nor do
+- they accept any liabilities with respect to them.
+-->
+
+<beans 
+	xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<import resource="classpath:/WEB-INF/population/conversion-service.xml"/>	
+	
+	
+	
+	<bean name="duty01" class="acme.entities.duties.Duty">
+		<property name="executionPeriodStart" value="2021/9/25 12:00"  />
+		<property name="executionPeriodEnd" value="2021/10/25 15:00"  />
+		<property name="title" value="Duty 01" />
+		<property name="description" value="This is duty 01" />
+		<property name="link" value="http://www.moreinfo.something.com"/>
+		<property name="isPublic" value="true"/>
+		<property name="isFinished" value="true"/>
+		<property name="workloadHours" value="3"/>
+		<property name="workloadMinutes" ><null/></property>
+	</bean>
+	
+	<bean name="duty11" class="acme.entities.duties.Duty">
+		<property name="executionPeriodStart" value="2021/9/25 12:00"  />
+		<property name="executionPeriodEnd" value="2021/11/25 12:00"  />
+		<property name="title" value="Duty 11" />
+		<property name="description" value="This is duty 11" />
+		<property name="link" value="http://www.moreinfo.something.com"/>
+		<property name="isPublic" value="true"/>
+		<property name="isFinished" value="true"/>
+		<property name="workloadHours" value="4"/>
+		<property name="workloadMinutes" ><null/></property>
+	</bean>
+	
+	<bean name="duty21" class="acme.entities.duties.Duty">
+		<property name="executionPeriodStart" value="2021/9/25 12:00"  />
+		<property name="executionPeriodEnd" value="2021/10/25 21:00"  />
+		<property name="title" value="Duty 21" />
+		<property name="description" value="This is duty 21" />
+		<property name="link" ><null/></property>
+		<property name="isPublic" value="true"/>
+		<property name="isFinished" value="true"/>
+		<property name="workloadHours" value="20"/>
+		<property name="workloadMinutes" ><null/></property>
+	</bean>
+	
+	<bean name="duty31" class="acme.entities.duties.Duty">
+		<property name="executionPeriodStart" value="2021/9/25 12:00"  />
+		<property name="executionPeriodEnd" value="2021/12/25 20:00"  />
+		<property name="title" value="Duty 31" />
+		<property name="description" value="This is duty 31" />
+		<property name="link" ><null/></property>
+		<property name="isPublic" value="true"/>
+		<property name="isFinished" value="true"/>
+		<property name="workloadHours" value="8"/>
+		<property name="workloadMinutes" value="33"/>
+	</bean>
+	
+	<bean name="duty41" class="acme.entities.duties.Duty">
+		<property name="executionPeriodStart" value="2021/9/25 12:00"  />
+		<property name="executionPeriodEnd" value="2021/10/25 16:00"  />
+		<property name="title" value="Duty 41" />
+		<property name="description" value="This is duty 41" />
+		<property name="link" ><null/></property>
+		<property name="isPublic" value="true"/>
+		<property name="isFinished" value="true"/>
+		<property name="workloadHours" value="13"/>
+		<property name="workloadMinutes" value="30"/>
+	</bean>
+	
+	<bean name="duty51" class="acme.entities.duties.Duty">
+		<property name="executionPeriodStart" value="2021/9/25 12:00"  />
+		<property name="executionPeriodEnd" value="2021/11/25 12:00"  />
+		<property name="title" value="Duty 51" />
+		<property name="description" value="This is duty 51" />
+		<property name="link" value="http://www.moreinfo.something.com"/>
+		<property name="isPublic" value="true"/>
+		<property name="isFinished" value="true"/>
+		<property name="workloadHours" value="1"/>
+		<property name="workloadMinutes" value="55"/>
+	</bean>
+	
+	<bean name="duty61" class="acme.entities.duties.Duty">
+		<property name="executionPeriodStart" value="2021/9/25 12:00"  />
+		<property name="executionPeriodEnd" value="2021/11/25 8:00"  />
+		<property name="title" value="Duty 61" />
+		<property name="description" value="This is duty 61" />
+		<property name="link" value="http://www.moreinfo.something.com"/>
+		<property name="isPublic" value="true"/>
+		<property name="isFinished" value="true"/>
+		<property name="workloadHours" value="50"/>
+		<property name="workloadMinutes" value="05"/>
+	</bean>
+	
+	<bean name="duty02" class="acme.entities.duties.Duty">
+		<property name="executionPeriodStart" value="2021/9/25 12:00"  />
+		<property name="executionPeriodEnd" value="2021/10/25 12:00"  />
+		<property name="title" value="Duty 2" />
+		<property name="description" value="This is duty 2" />
+		<property name="link"><null/></property>
+		<property name="isPublic" value="false"/>
+		<property name="isFinished" value="true"/>
+		<property name="workloadHours" value="5"/>
+		<property name="workloadMinutes" value="50"/>
+	</bean>
+	
+	<bean name="duty03" class="acme.entities.duties.Duty">
+		<property name="executionPeriodStart" value="2021/10/25 12:00"  />
+		<property name="executionPeriodEnd" value="2021/11/25 12:00"  />
+		<property name="title" value="Duty 3" />
+		<property name="description" value="This is duty 3" />
+		<property name="link" value="http://www.optional.link.com"/>
+		<property name="isPublic" value="true"/>
+		<property name="isFinished" value="true"/>
+		<property name="workloadHours" value="8"/>
+		<property name="workloadMinutes"><null/></property>
+	</bean>
+	
+	<bean name="duty04" class="acme.entities.duties.Duty">
+		<property name="executionPeriodStart" value="2021/11/25 12:00"  />
+		<property name="executionPeriodEnd" value="2021/12/25 12:00"  />
+		<property name="title" value="Duty 4" />
+		<property name="description" value="This is duty 4" />
+		<property name="link" value="http://www.website.com"/>
+		<property name="isPublic" value="false"/>
+		<property name="isFinished" value="false"/>
+		<property name="workloadHours" value="7"/>
+		<property name="workloadMinutes" value="10"/>
+	</bean>
+	
+	
+	<bean name="duty05" class="acme.entities.duties.Duty">
+		<property name="executionPeriodStart" value="2021/9/25 12:00"  />
+		<property name="executionPeriodEnd" value="2021/10/25 15:00"  />
+		<property name="title" value="Duty 05" />
+		<property name="description" value="This is duty 05" />
+		<property name="link" value="http://www.moreinfo.something.com"/>
+		<property name="isPublic" value="true"/>
+		<property name="isFinished" value="false"/>
+		<property name="workloadHours" value="3"/>
+		<property name="workloadMinutes" ><null/></property>
+	</bean>
+	
+	<bean name="duty15" class="acme.entities.duties.Duty">
+		<property name="executionPeriodStart" value="2021/9/25 12:00"  />
+		<property name="executionPeriodEnd" value="2021/11/25 12:00"  />
+		<property name="title" value="Duty 15" />
+		<property name="description" value="This is duty 15" />
+		<property name="link" value="http://www.moreinfo.something.com"/>
+		<property name="isPublic" value="true"/>
+		<property name="isFinished" value="false"/>
+		<property name="workloadHours" value="4"/>
+		<property name="workloadMinutes" ><null/></property>
+	</bean>
+	
+	<bean name="duty25" class="acme.entities.duties.Duty">
+		<property name="executionPeriodStart" value="2021/9/25 12:00"  />
+		<property name="executionPeriodEnd" value="2021/10/25 21:00"  />
+		<property name="title" value="Duty 25" />
+		<property name="description" value="This is duty 25" />
+		<property name="link" ><null/></property>
+		<property name="isPublic" value="true"/>
+		<property name="isFinished" value="false"/>
+		<property name="workloadHours" value="20"/>
+		<property name="workloadMinutes" ><null/></property>
+	</bean>
+	
+	<bean name="duty35" class="acme.entities.duties.Duty">
+		<property name="executionPeriodStart" value="2021/9/25 12:00"  />
+		<property name="executionPeriodEnd" value="2021/12/25 20:00"  />
+		<property name="title" value="Duty 35" />
+		<property name="description" value="This is duty 35" />
+		<property name="link" ><null/></property>
+		<property name="isPublic" value="true"/>
+		<property name="isFinished" value="false"/>
+		<property name="workloadHours" value="8"/>
+		<property name="workloadMinutes" value="33"/>
+	</bean>
+	
+	<bean name="duty45" class="acme.entities.duties.Duty">
+		<property name="executionPeriodStart" value="2021/9/25 12:00"  />
+		<property name="executionPeriodEnd" value="2021/10/25 16:00"  />
+		<property name="title" value="Duty 45" />
+		<property name="description" value="This is duty 45" />
+		<property name="link" ><null/></property>
+		<property name="isPublic" value="true"/>
+		<property name="isFinished" value="false"/>
+		<property name="workloadHours" value="13"/>
+		<property name="workloadMinutes" value="30"/>
+	</bean>
+	
+	<bean name="duty55" class="acme.entities.duties.Duty">
+		<property name="executionPeriodStart" value="2021/9/25 12:00"  />
+		<property name="executionPeriodEnd" value="2021/11/25 12:00"  />
+		<property name="title" value="Duty 55" />
+		<property name="description" value="This is duty 55" />
+		<property name="link" value="http://www.moreinfo.something.com"/>
+		<property name="isPublic" value="true"/>
+		<property name="isFinished" value="false"/>
+		<property name="workloadHours" value="1"/>
+		<property name="workloadMinutes" value="55"/>
+	</bean>
+	
+	<bean name="duty65" class="acme.entities.duties.Duty">
+		<property name="executionPeriodStart" value="2021/9/25 12:00"  />
+		<property name="executionPeriodEnd" value="2021/11/25 8:00"  />
+		<property name="title" value="Duty 65" />
+		<property name="description" value="This is duty 65" />
+		<property name="link" value="http://www.moreinfo.something.com"/>
+		<property name="isPublic" value="true"/>
+		<property name="isFinished" value="false"/>
+		<property name="workloadHours" value="50"/>
+		<property name="workloadMinutes" value="05"/>
+	</bean>
+	
+	<bean name="officer1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="officer1" />
+		<property name="password" value="officer1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Jimmy" />
+				<property name="surname" value="Carter" />
+				<property name="email" value="officer1@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="officer1Officer" />
+				<ref bean="officer1Authenticated" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="officer1Officer" class="acme.entities.roles.Officer">
+		<property name="userAccount" ref="officer1UserAccount" />
+	</bean>
+	
+	<bean name="officer1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="officer1UserAccount" />
+	</bean>
+	
+	<bean name="officer2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="officer2" />
+		<property name="password" value="officer2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Ronald" />
+				<property name="surname" value="Reagan" />
+				<property name="email" value="officer2@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="officer2Officer" />
+				<ref bean="officer2Authenticated" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="officer2Officer" class="acme.entities.roles.Officer">
+		<property name="userAccount" ref="officer2UserAccount" />
+	</bean>
+	
+	<bean name="officer2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="officer2UserAccount" />
+	</bean>
+
+</beans>
